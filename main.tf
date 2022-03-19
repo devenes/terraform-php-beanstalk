@@ -52,6 +52,14 @@ resource "aws_elastic_beanstalk_environment" "tfenv" {
   description         = "environment for web app"                                 # Define environment description
   version_label       = aws_elastic_beanstalk_application_version.eb_app_ver.name # Define version label
 
+
+  setting {
+    namespace = "aws:elasticbeanstalk:application:environment"
+    name      = "security_group"
+    value     = ["sg-0ca128398dc1ae28a"]
+  }
+
+
   setting {
     namespace = "aws:autoscaling:launchconfiguration" # Define namespace
     name      = "IamInstanceProfile"                  # Define name
