@@ -1,5 +1,12 @@
 # PHP Elastic Beanstalk Deployment with Terraform
 
+<img src="https://img.shields.io/badge/AWS-ElasticBeanstalk-orange.svg?style=flat-square" alt="AWS" />
+<img src="https://img.shields.io/badge/PHP-8.0-blue.svg?style=flat-square" alt="PHP Version" />
+<img src="https://img.shields.io/badge/Terraform-1.1.7-purple.svg?style=flat-square" alt="Terraform" />
+<img src="https://img.shields.io/badge/Amazon Linux 2-3.3.11-green.svg?style=flat-square" alt="AWS" />
+
+<img src="https://miro.medium.com/max/1200/1*LI9WOn1yLbaNXsEgs7H9dg.png" alt="diagram" />
+
 ## Getting Started with the Sources
 
 Terraform is a tool for building and managing infrastructure as code. It is a declarative,
@@ -75,7 +82,7 @@ Example (VPC): `tcp, 22, 22, sg-903004f8`
 
 - Note: We don't create a new VPC in this template, so you don't need to specify the VPC ID and Security Group ID.
 
-## Configure SSH access to the Elastic Beanstalk environment:
+## Configuring SSH access to the Elastic Beanstalk environment:
 
 ```
   setting {
@@ -85,7 +92,7 @@ Example (VPC): `tcp, 22, 22, sg-903004f8`
   }
 ```
 
-## Define Solution Stack
+## Defining Solution Stack
 
 You need to define your application version number and platform operating system version number on AWS that you want to use for deployment under `aws_elastic_beanstalk_environment` source section in main Terraform file called `main.tf` in this project.
 
@@ -122,6 +129,8 @@ You will be able to run `terraform destroy` command when you push your code to t
 
 ## Define Terraform stages in GitHub Actions workflow:
 
+You can define stages in GitHub Actions workflow by adding the following commands to your GitHub Action workflow:
+
 ```
 steps:
     - uses: actions/checkout@v2
@@ -144,8 +153,4 @@ steps:
     if: github.ref == 'refs/heads/destroy'
     id: destroy
     run: terraform destroy -auto-approve
-```
-
-```
-
 ```
