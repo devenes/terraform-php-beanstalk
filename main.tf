@@ -13,12 +13,6 @@ terraform {
   }
 }
 
-module "elastic-beanstalk-environment" {
-  source  = "cloudposse/elastic-beanstalk-environment/aws"
-  version = "0.3.11"
-  # insert the 6 required variables here
-}
-
 # AWS Provider configuration
 provider "aws" {
   profile = "default"   # AWS profile 
