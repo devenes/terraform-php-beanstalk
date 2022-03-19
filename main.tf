@@ -54,12 +54,6 @@ resource "aws_elastic_beanstalk_environment" "tfenv" {
 
 
   setting {
-    namespace = "aws:autoscaling:launchconfiguration"
-    name      = "SecurityGroups"
-    value     = "sg-0ca128398dc1ae28a"
-  }
-
-  setting {
     namespace = "aws:autoscaling:launchconfiguration" # Define namespace
     name      = "IamInstanceProfile"                  # Define name
     value     = "aws-elasticbeanstalk-ec2-role"       # Define value
