@@ -53,25 +53,25 @@ resource "aws_elastic_beanstalk_environment" "tfenv" {
   version_label       = aws_elastic_beanstalk_application_version.eb_app_ver.name # Define version label
 
   setting {
-    namespace = "aws:elasticbeanstalk:environment:process:default"
-    name      = "Port"
-    value     = 80
+    namespace = "aws:elasticbeanstalk:environment:process:default" # Define namespace for environment settings
+    name      = "Port"                                             # Define name of the environment setting
+    value     = 80                                                 # Define value of the environment setting
   }
   setting {
-    namespace = "aws:elasticbeanstalk:environment:process:default"
-    name      = "Protocol"
-    value     = "HTTP"
+    namespace = "aws:elasticbeanstalk:environment:process:default" # Define namespace for environment settings
+    name      = "Protocol"                                         # Define name of the environment setting
+    value     = "HTTP"                                             # Define value of the environment setting
   }
   setting {
-    namespace = "aws:autoscaling:launchconfiguration"
-    name      = "SSHSourceRestriction"
-    value     = "tcp, 22, 22, 0.0.0.0/0"
+    namespace = "aws:autoscaling:launchconfiguration" # Define namespace for environment settings
+    name      = "SSHSourceRestriction"                # Define name of the environment setting
+    value     = "tcp, 22, 22, 0.0.0.0/0"              # Define value of the environment setting
   }
 
   setting {
-    namespace = "aws:autoscaling:launchconfiguration"
-    name      = "SecurityGroups"
-    value     = "devsec"
+    namespace = "aws:autoscaling:launchconfiguration" # Define namespace for environment settings
+    name      = "SecurityGroups"                      # Define name of the environment setting
+    value     = "devsec"                              # Define name of the security group to be used
   }
 
   setting {
