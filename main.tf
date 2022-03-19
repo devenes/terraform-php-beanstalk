@@ -65,7 +65,7 @@ resource "aws_elastic_beanstalk_environment" "tfenv" {
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name      = "SSHSourceRestriction"
-    value     = "http, 80, 80, 0.0.0.0/0"
+    value     = "tcp, 80, 80, 0.0.0.0/0"
   }
 
   setting {
