@@ -72,4 +72,5 @@ resource "aws_elastic_beanstalk_environment" "tfenv" {
     name      = "SecurityGroups"                      # Define name
     value     = "sg-0ca128398dc1ae28a"                # Define security group
   }
+  
 }
