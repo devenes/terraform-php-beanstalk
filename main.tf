@@ -51,6 +51,7 @@ resource "aws_elastic_beanstalk_environment" "tfenv" {
   solution_stack_name = "64bit Amazon Linux 2 v3.3.11 running PHP 8.0"            # Define current version of the platform
   description         = "environment for web app"                                 # Define environment description
   version_label       = aws_elastic_beanstalk_application_version.eb_app_ver.name # Define version label
+  security_groups     = ["sg-0ca128398dc1ae28a"]                                  # Define security group
 
   setting {
     namespace = "aws:autoscaling:launchconfiguration" # Define namespace
@@ -67,9 +68,5 @@ resource "aws_elastic_beanstalk_environment" "tfenv" {
     name      = "InstanceType"                        # Define name
     value     = "t2.micro"                            # Define instance type
   }
-  setting {
-    namespace = "aws:autoscaling:launchconfiguration" # Define namespace
-    name      = "SecurityGroups"                      # Define name
-    value     = "sg-0ca128398dc1ae28a"                # Define security group
-  }
+
 }
