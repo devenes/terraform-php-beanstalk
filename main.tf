@@ -54,9 +54,9 @@ resource "aws_elastic_beanstalk_environment" "tfenv" {
 
 
   setting {
-    namespace = "aws:elasticbeanstalk:application:environment"
-    name      = "security_group"
-    value     = "sg-0ca128398dc1ae28a"
+    namespace = "aws:autoscaling:launchconfiguration"
+    name      = "SecurityGroups"
+    value     = "sg-0b8f8f8f8f8f8f8f8f"
   }
 
 
