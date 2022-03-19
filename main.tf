@@ -5,6 +5,11 @@ terraform {
       version = "~> 3.27"       # required
     }
   }
+  module "elastic-beanstalk-environment" {
+    source  = "cloudposse/elastic-beanstalk-environment/aws"
+    version = "0.3.11"
+    # insert the 6 required variables here
+  }
 
   backend "s3" {
     bucket = "myapp-mybucket" # S3 bucket name
