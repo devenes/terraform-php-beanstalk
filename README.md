@@ -1,9 +1,6 @@
 # PHP Elastic Beanstalk Deployment with Terraform
 
-<img src="https://img.shields.io/badge/AWS-ElasticBeanstalk-orange.svg?style=flat-square" alt="AWS" />
-<img src="https://img.shields.io/badge/PHP-8.0-blue.svg?style=flat-square" alt="PHP Version" />
-<img src="https://img.shields.io/badge/Terraform-1.1.7-purple.svg?style=flat-square" alt="Terraform" />
-<img src="https://img.shields.io/badge/Amazon Linux 2-3.3.11-green.svg?style=flat-square" alt="AWS" />
+<img src="https://img.shields.io/badge/AWS-ElasticBeanstalk-orange.svg?style=flat-square" alt="AWS" /> <img src="https://img.shields.io/badge/PHP-8.0-blue.svg?style=flat-square" alt="PHP Version" /> <img src="https://img.shields.io/badge/Terraform-1.1.7-purple.svg?style=flat-square" alt="Terraform" /> <img src="https://img.shields.io/badge/Amazon Linux 2-3.3.11-green.svg?style=flat-square" alt="AWS" />
 
 <img src="https://miro.medium.com/max/1200/1*LI9WOn1yLbaNXsEgs7H9dg.png" alt="diagram" />
 
