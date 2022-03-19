@@ -48,7 +48,7 @@ resource "aws_elastic_beanstalk_application_version" "eb_app_ver" {
 resource "aws_elastic_beanstalk_environment" "tfenv" {
   name                = "enes-eb-tf-env"                                          # Name of the Elastic Beanstalk environment
   application         = aws_elastic_beanstalk_application.eb_app.name             # Elastic Beanstalk application name
-  solution_stack_name = "^64bit Amazon Linux (.*) running PHP 8.0$"               # Define current version of the platform
+  solution_stack_name = "64bit Amazon Linux 2 running PHP 8.0"                    # Define current version of the platform
   description         = "environment for web app"                                 # Define environment description
   version_label       = aws_elastic_beanstalk_application_version.eb_app_ver.name # Define version label
 
@@ -72,5 +72,5 @@ resource "aws_elastic_beanstalk_environment" "tfenv" {
     name      = "SecurityGroups"                      # Define name
     value     = "sg-0ca128398dc1ae28a"                # Define security group
   }
-  
+
 }
