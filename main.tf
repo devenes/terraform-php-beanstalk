@@ -21,7 +21,7 @@ provider "aws" {
 
 # Create S3 bucket for PHP web app
 resource "aws_s3_bucket" "eb_bucket" {
-  bucket = "enes-eb-PHP-web" # Name of S3 bucket to create for web app deployment needs to be unique 
+  bucket = "enes-eb-php-web" # Name of S3 bucket to create for web app deployment needs to be unique 
 }
 
 # Define App files to be uploaded to S3
