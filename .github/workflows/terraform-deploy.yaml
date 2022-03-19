@@ -1,12 +1,15 @@
 name: "Terraform Deployment"
+
 on:
   workflow_dispatch:
   push:
     paths:
       - "*/**"
+
 defaults:
   run:
     shell: bash
+
 jobs:
   terraform:
     name: ${{matrix.runner}} - ${{ matrix.environment }}
