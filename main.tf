@@ -73,4 +73,5 @@ resource "aws_elastic_beanstalk_environment" "tfenv" {
     value     = "sg-0ca128398dc1ae28a"                # Define security group
   }
 
+
 }
