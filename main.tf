@@ -52,6 +52,16 @@ resource "aws_elastic_beanstalk_environment" "tfenv" {
   description         = "environment for web app"                                 # Define environment description
   version_label       = aws_elastic_beanstalk_application_version.eb_app_ver.name # Define version label
 
+  setting {
+    namespace = "aws:elasticbeanstalk:environment:process:default"
+    name      = "Port"
+    value     = 80
+  }
+  setting {
+    namespace = "aws:elasticbeanstalk:environment:process:default"
+    name      = "Protocol"
+    value     = "HTTP"
+  }
 
   setting {
     namespace = "aws:autoscaling:launchconfiguration" # Define namespace
